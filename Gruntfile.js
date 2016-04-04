@@ -9,9 +9,20 @@ module.exports = function(grunt) {
 					dest: 'compressed/'
 				}]
 			}
+		},
+		inline: {
+			dist: {
+				options:{
+					cssmin: true,
+					tag: ''
+				},
+				src: './*.html',
+				dest: 'compressed/'
+			}
 		}		
 });
 
     grunt.loadNpmTasks("grunt-contrib-imagemin");
-    grunt.registerTask('default', ['imagemin']);
+    grunt.loadNpmTasks("grunt-inline");
+    grunt.registerTask('default', ['imagemin', 'inline']);
 };
