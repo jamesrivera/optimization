@@ -5,7 +5,9 @@ https://github.com/udacity/frontend-nanodegree-mobile-portfolio
 
 ##Part 1: Optimize PageSpeed Insights score for index.html
 
-### Manual Optimizations 
+### Optimize PageSpeed Insights score (```index.html```, ```perfmatters.js```)
+
+#### Manual Optimizations 
 - inlined web font css
 - inlined perfmatters.js
 - created pizza-thumb.jpg to avoid resizing of pizza.jpg
@@ -13,7 +15,7 @@ https://github.com/udacity/frontend-nanodegree-mobile-portfolio
 - specified image dimensions
 - eliminated render-blocking JavaScript by using async
 
-### Grunt Workflow
+#### Grunt Workflow
 - used ```grunt-contrib-imagemin``` to optimize images
 - used ```grunt-inline``` to minify and inline css
 - sent workflow to compressed/ (manually extracted files after)
@@ -21,15 +23,17 @@ https://github.com/udacity/frontend-nanodegree-mobile-portfolio
 ##Part 2: Optimize Frames per Second in pizza.html
 
 ### Shorten pizza resize time (```main.js```)
+
+#### Manual Optimizations
 - ```changePizzaSizes()```: used fixed percentages instead of calculating new size
 - ```changePizzaSizes()```: moved all DOM accesses outside of main loop
 
 ### Improve parallax frame rate (```main.js```, ```style.css```)
 
-### Manual Optimizations
+#### Manual Optimizations
 - ```createPizzas()```: only generated as many pizzas as necessary to fill the screen
 - ```updatePositions()```: removed heavy calculations from within the loop
 - re-optimized arger images in Photoshop
 
-### Grunt Workflow
+#### Grunt Workflow
 - used ```grunt-contrib-imagemin``` to optimize images
